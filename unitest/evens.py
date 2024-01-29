@@ -6,24 +6,28 @@ def even_num_of_evens(numbers):
     if the number of even numbers is 0, return False
     if the number of even numbers is even, return True
     """
- #Method : Write a test that fails then add a code to the function that will make it pass
+    #Method : Write a test that fails then add a code to the function that will make it pass
     # using isinstance method to check 
     # if the value entered is a list
     if isinstance(numbers, list):
-        if numbers == []:
-            return False
-        else:
-            evens = 0
-        for n in numbers:
-            if n % 2 == 0:
-                evens += 1
+        evens = sum([1 for n in numbers if n % 2 == 0])
+        
+        return True if evens and evens % 2 == 0 else False
 
-        if evens:
-            return evens % 2 == 0
-        else:
-            return False          
+        # if numbers == []:
+        #     return False
+        # else:
+        #     evens = 0
+        # for n in numbers:
+        #     if n % 2 == 0:
+        #         evens += 1
+
+        # if evens:
+        #     return evens % 2 == 0
+        # else:
+        #     return False          
     else:
         raise TypeError("A list was not passed into the function, please check function!")
 
 if __name__ == '__main__':
-    print(even_num_of_evens(5))
+    even_num_of_evens([5,3,4])

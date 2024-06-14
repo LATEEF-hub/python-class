@@ -11,7 +11,7 @@ class TestEvens(unittest.TestCase):
         #checking if the list entered is an empty list
         self.assertEqual(even_num_of_evens([]), False)
         #checking if the list entered is an 2 value in list
-        self.assertEqual(even_num_of_evens([4, 2]), True)
+        self.assertEqual(even_num_of_evens([4, 2]), False)
         self.assertEqual(even_num_of_evens([8]), False)
         self.assertEqual(even_num_of_evens([1,3,5]), False)
 

@@ -30,4 +30,4 @@ def even_num_of_evens(numbers):
         raise TypeError("A list was not passed into the function, please check function!")
 
 if __name__ == '__main__':
-    even_num_of_evens([5,3,4])
+    even_num_of_evens([5,7,4])
